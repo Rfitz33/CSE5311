@@ -1,0 +1,3 @@
+a) Aggregate method; the total cost of 'n' insertions is O(n), so the amortized cost per insertion is O(1).
+b) Accounting method; by charging a constant amount per insertion and using the extra credit to pay for copying during rezies, 
+the amortized cost per insertion remains O(1).
