@@ -59,18 +59,23 @@ void depthFirstSearch(Graph* graph, int start) {
 }
 
 int main() {
-    /* Create a graph with 6 vertices */
+    /* Create a graph with 6 vertices from Figure 22.4 */
     int V = 6;
     Graph* graph = createGraph(V);
 
     addEdge(graph, 0, 1);
-    addEdge(graph, 0, 2);
-    addEdge(graph, 1, 3);
+    addEdge(graph, 0, 3);
     addEdge(graph, 1, 4);
+    addEdge(graph, 2, 4);
     addEdge(graph, 2, 5);
+    addEdge(graph, 3, 1);
+    addEdge(graph, 4, 3);
+    addEdge(graph, 5, 5);
 
-    /* Run DFS from vertex 0 */
-    depthFirstSearch(graph, 0);
+    /* Run DFS from each vertex */
+    for(int i = 0; i < V; i++) {
+        depthFirstSearch(graph, i);
+    }
 
     /* Cleanup */
     for (int i = 0; i < V; i++) {
