@@ -73,15 +73,30 @@ void topologicalSort(Graph* graph) {
 }
 
 int main() {
-    /* Example usage */
-    int V = 6;
+    /* Example usage from figure 22.8 */
+    int V = 14;
     Graph* graph = createGraph(V);
-    addEdge(graph, 5, 2);
-    addEdge(graph, 5, 0);
-    addEdge(graph, 4, 0);
-    addEdge(graph, 4, 1);
-    addEdge(graph, 2, 3);
-    addEdge(graph, 3, 1);
+    addEdge(graph, 0, 4);
+    addEdge(graph, 0, 5);
+    addEdge(graph, 0, 11);
+    addEdge(graph, 1, 4);
+    addEdge(graph, 1, 8);
+    addEdge(graph, 1, 2);
+    addEdge(graph, 2, 5);
+    addEdge(graph, 2, 6);
+    addEdge(graph, 2, 9);
+    addEdge(graph, 3, 2);
+    addEdge(graph, 3, 6);
+    addEdge(graph, 3, 13);
+    addEdge(graph, 4, 7);
+    addEdge(graph, 5, 8);
+    addEdge(graph, 5, 12);
+    addEdge(graph, 6, 5);
+    addEdge(graph, 8, 7);
+    addEdge(graph, 9, 10);
+    addEdge(graph, 9, 11);
+    addEdge(graph, 10, 13);
+    addEdge(graph, 12, 9);
 
     topologicalSort(graph);
 
